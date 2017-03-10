@@ -1,0 +1,42 @@
+#wrapper{
+  padding: 10px;
+}
+table, td, th 
+{    
+  border: 1px solid black;
+  text-align: left;
+}
+table 
+{
+  border-collapse: collapse;
+  width: 300px;
+}
+
+th, td 
+{
+  padding: 15px;
+}
+#registration
+{
+  border:2px solid black;
+  width: 400px;
+  display: inline-block;
+  padding: 25px;
+  background-color: #D4D4D4;
+ }
+#login
+{
+  border:2px solid black;
+  margin-left: 20px;
+  padding: 25px;
+  width: 400px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #D4D4D4;
+}
+#show_comments{
+  padding-left: 25px;
+}
+#post_comment{
+  padding-left: 25px;
+}

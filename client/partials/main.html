@@ -1,0 +1,29 @@
+<div ng-controller='usersController'>
+<div id="registration">
+<h3>Registration</h3>
+  <form ng-model = "user">
+	<p>First Name: <input type="text" ng-model='user.firstname'></p> 
+	<p>Last Name: <input type="text" ng-model='user.lastname'></p>
+	<p>Email: <input type="text" ng-model='user.email'></p>	
+	<p>Password : <input type="text" ng-model='user.password'></p>
+	<p>Confirm Password: <input type="text" ng-model='user.password_confirm'></p>
+	<p>Birthday: <input type="date" ng-model='user.birthday'></p>
+	<p><input type="submit" value="Register" ng-click="register()"></p>
+</form>
+</div>
+
+<div id="login">
+<h3>Login</h3>
+  <form ng-model = "userLogin" ng-submit = "login()">
+    <p>Email: <input type="email"  ng-model = "userLogin.email"><br></p>
+    <p>Password: <input type="text"  ng-model = "userLogin.password"></p>
+    <input type="submit" value = "Login" ng-click="login()">
+  </form>
+</div>
+<p>{{errors.firstname.message}}</p>
+<p>{{errors.lastname.message}}</p>
+<p>{{errors.email.message}}</p>
+<p>{{errors.password.message}}</p>
+<p>{{errors.birthday.message}}</p>
+<p>{{errors.login_reg.message}}</p>
+</div>

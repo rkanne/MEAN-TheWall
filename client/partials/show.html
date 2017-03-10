@@ -1,0 +1,35 @@
+<div id="wrapper">
+<h3>Full MEAN Wall</h3>
+<div ng-controller='showController'>
+	<h4>Welcome {{currentUser}}</h4>
+
+	<br>
+	 <input type="submit" value = "logout" ng-click="logout()">
+</div>
+<hr>
+
+<div ng-controller='wallsController'>
+
+		<p><strong>Post a message: </strong></p>
+		<p><textarea cols="50" rows="10" ng-model="wall.message"></textarea></p>
+		<input type="submit" value="Post Message" ng-click="message()">
+
+	<div id="show_messages" ng-repeat="wall in walls track by $index" >
+			<p><strong>{{wall._user.firstname}}</strong> - {{wall.createdAt | date: 'h:mm a M/d/yy '}}:</p>  
+			<p>{{wall.message}}</p>
+			
+			<div id="show_comments" ng-repeat="comment in wall.comments" >	
+				<p><strong>{{comment._user.firstname}}</strong> - {{comment._user.createdAt | date: 'h:mm a M/d/yy '}}:</p>  
+				<p>{{comment.comment}}</p>
+			</div>
+			<form>
+			<div id="post_comment">
+			<p><strong>Post a comment:</strong></p>
+			<p><textarea cols="50" rows="5" ng-model="post[$index].comment"></textarea></p>
+			<input type="submit" value="Post Comment" ng-click="comment(wall._id, $index)">
+			</div>
+		</form>
+	</div>
+
+</div>
+</div>

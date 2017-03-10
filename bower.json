@@ -1,0 +1,21 @@
+{
+  "name": "wall",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "rkanne <rkanne15@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.0",
+    "angular": "^1.6.0"
+  }
+}
